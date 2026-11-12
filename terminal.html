@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, interactive-widget=resizes-content" />
+  <title>fabio@fsk-it:~ | Terminal</title>
+  <meta name="description" content="Portfólio de Fabio Firmino em modo terminal. Digite \help para ver os comandos." />
+  <meta name="theme-color" content="#000000" />
+  <link rel="icon" type="image/x-icon" href="assets/img/favicon.ico" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=VT323&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet" />
+  <link href="css/terminal.css" rel="stylesheet" />
+</head>
+<body class="theme-verde">
+  <canvas id="rain" aria-hidden="true"></canvas>
+
+  <div class="monitor" id="monitor">
+    <div class="bezel">
+      <div class="screen" id="screen">
+        <div class="glare" aria-hidden="true"></div>
+        <div class="scan" aria-hidden="true"></div>
+        <div class="term" id="term" role="log" aria-live="polite" aria-label="Saída do terminal">
+          <div id="out"></div>
+          <form class="line" id="form" autocomplete="off">
+            <label class="ps1" for="cmd"><span class="u">fabio@fsk-it</span>:<span class="p">~</span>$</label>
+            <span class="input-wrap">
+              <input id="cmd" type="text" spellcheck="false" autocapitalize="off" autocorrect="off" enterkeyhint="go" aria-label="Digite um comando" disabled />
+              <span class="ghost" id="ghost" aria-hidden="true"></span>
+            </span>
+          </form>
+        </div>
+      </div>
+      <div class="bezel__foot">
+        <span class="brand">FSK·IT <small>CRT-1999</small></span>
+        <span class="led" title="Ligado"></span>
+      </div>
+    </div>
+    <div class="stand" aria-hidden="true"></div>
+  </div>
+
+  <nav class="quick" id="quick" aria-label="Comandos rápidos"></nav>
+
+  <a class="back" href="index.html" title="Voltar ao site">← site</a>
+
+  <div class="fullrain" id="fullrain" hidden><span>pressione qualquer tecla para sair da Matrix</span></div>
+
+  <script src="js/data.js"></script>
+  <script src="js/terminal.js"></script>
+</body>
+</html>
